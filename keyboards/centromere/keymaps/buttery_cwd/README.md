@@ -1,6 +1,6 @@
-# # Dennytom's Georgi Layout
+# # CwD's Centromere Layout
 
-This keymap is using a custom chording engine. Head out to my (DennyTom) user space to find the source files and details.
+This keymap is using DennyTom's custom chording engine. Head out to DennyTom's user space to find the source files and details.
 
 To make a real keymap from the JSON file, run 
 
