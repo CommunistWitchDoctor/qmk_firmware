@@ -7,5 +7,6 @@ To make a real keymap from the JSON file, run
 ```sh
 python3 parser.py keymap_def.json keymap.c
 ```
+from DennyTom's chording_engine folder.
 
-Likely will change with use. I enjoy the modifiers on the "home row".
+VERY in progress, so expect lots of changes as I figure out how I want to implement chording!
