@@ -39,10 +39,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_COLEMAK] = LAYOUT(
-      KC_TAB,                  KC_Q,   KC_W,   KC_F,   KC_P,   KC_G,                                                   KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,    KC_PIPE,
-      KC_ESC,                  KC_A,   KC_R,   KC_S,   KC_T,   KC_D,                                                   KC_H,    KC_N,    KC_E,    KC_I,    KC_O, KC_QUOT,
-      KC_LSFT,                 KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_LSFT,   KC_LALT,           KC_RALT, KC_LSFT, KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-         KC_LGUI, KC_LCTRL, MT(MOD_LSFT, KC_BSPC), LT(_RAISE, KC_SPC), LT(_LOWER, KC_ENT),          LT(_RAISE, KC_DEL), LT(_LOWER, KC_BSPC), KC_RSFT,  KC_RCTRL, KC_RGUI
+      KC_TAB,            KC_Q,   KC_W,   KC_F,   KC_P,   KC_G,                                                  KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_PIPE,
+      KC_ESC,            KC_A,   KC_R,   KC_S,   KC_T,   KC_D,                                                  KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT,
+      KC_LSFT,           KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_LSFT,   KC_LALT,          KC_RALT, KC_LSFT, KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+      KC_LGUI, KC_LCTRL, MT(MOD_LSFT, KC_BSPC), LT(_RAISE, KC_SPC), LT(_LOWER, KC_ENT),       LT(_RAISE, KC_DEL), LT(_LOWER, KC_BSPC), KC_RSFT,  KC_RCTRL, KC_RGUI
     ),
 /*
  * Lower Layer: Symbols
@@ -59,10 +59,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_LOWER] = LAYOUT(
-      _______, KC_GRV,   KC_LBRC, KC_LCBR, KC_LPRN, KC_LABK,                                     KC_RABK, KC_RPRN, KC_RCBR, KC_RBRC, KC_QUES, _______,
-      _______, KC_TILDE, KC_MINS, KC_QUOT, KC_COLN, KC_UNDS,                                     KC_BSLS, KC_EQL,  KC_DQUO, KC_PLUS, KC_BSLS, _______,
-      KC_LSFT, KC_EXLM,  KC_AT,   KC_HASH, KC_DLR,  KC_PERC, _______, _______, _______, _______, KC_CIRC, KC_AMPR, KC_ASTR, KC_PIPE, KC_QUES, KC_RSFT,
-                                 _______, _______, _______, _______, _______,  _______,  _______, _______, _______, _______
+      _______, KC_GRV,   KC_LBRC, KC_LCBR, KC_LPRN, KC_LABK,                                            KC_RABK, KC_RPRN, KC_RCBR, KC_RBRC, KC_QUES, _______,
+      _______, KC_TILDE, KC_MINS, KC_QUOT, KC_COLN, KC_UNDS,                                            KC_BSLS, KC_EQL,  KC_DQUO, KC_PLUS, KC_BSLS, _______,
+      KC_LSFT, KC_EXLM,  KC_AT,   KC_HASH, KC_DLR,  KC_PERC, _______, _______,        _______, _______, KC_CIRC, KC_AMPR, KC_ASTR, KC_PIPE, KC_QUES, KC_RSFT,
+                                  _______, _______, _______, _______, _______,        _______,  _______, _______, _______, _______
     ),
 /*
  * Raise Layer: Number keys, media, navigation
@@ -79,10 +79,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_RAISE] = LAYOUT(
-      _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                                        KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
-      _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
-      KC_F11,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______, _______, _______, _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F12,
-                                 _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+      _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                                               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
+      KC_F11,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                                              _______, _______, _______, _______, _______, _______,
+      KC_F12,  KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______, _______,        _______, _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F12,
+                                 _______, _______, _______, _______, _______,        _______, _______, _______, _______, _______
     ),
 /*
  * Adjust Layer: Function keys, RGB
@@ -99,10 +99,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_ADJUST] = LAYOUT(
-      KC_CAPS, _______, KC_HOME, KC_UP,   KC_PGUP, _______,                                     _______,  _______, _______, _______, _______,  _______,
-      KC_INS,  _______, KC_LEFT, KC_DOWN, KC_RGHT, _______,                                     RGB_MOD,  RGB_VAI, RGB_HUI, RGB_SAI, RGB_TOG,  _______,
-      _______, _______, KC_END,  RGB_HUD, KC_PGDN, _______, _______, _______, _______, _______, RGB_RMOD, RGB_VAD, RGB_HUD, RGB_SAD, _______, _______,
-                                 _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+      KC_CAPS, _______, KC_HOME, KC_UP,   KC_PGUP, _______,                                            _______,  _______, _______, _______, _______,  _______,
+      KC_INS,  _______, KC_LEFT, KC_DOWN, KC_RGHT, _______,                                            RGB_MOD,  RGB_VAI, RGB_HUI, RGB_SAI, RGB_TOG,  _______,
+      _______, _______, KC_END,  RGB_HUD, KC_PGDN, _______, _______, _______,        _______, _______, RGB_RMOD, RGB_VAD, RGB_HUD, RGB_SAD, _______, _______,
+                                 _______, _______, _______, _______, _______,        _______, _______, _______, _______, _______
     ),
 // /*
 //  * Layer template
