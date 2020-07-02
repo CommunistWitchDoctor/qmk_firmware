@@ -51,7 +51,7 @@ enum internal_keycodes {
 };
 
 enum pseudolayers {
-    ALWAYS_ON, COLEMAK, SYM, FNC, NAV
+    ALWAYS_ON, COLEMAK, SYM, NUM, FNC, NAV
 };
 
 #define CHORD_TIMEOUT 100
@@ -799,7 +799,8 @@ uint8_t state_67 = IDLE;
 uint8_t counter_67 = 0;
 const struct Chord chord_67 PROGMEM = {H_THU2 + H_THU5, COLEMAK, &state_67, &counter_67, KC_ESC, FNC, key_layer_dance};
 uint8_t state_68 = IDLE;
-const struct Chord chord_68 PROGMEM = {H_THU6, COLEMAK, &state_68, NULL, KC_ENTER, 0, single_dance};
+uint8_t counter_68 = 0;
+const struct Chord chord_68 PROGMEM = {H_THU6, COLEMAK, &state_68, &counter_68, KC_SPC, NUM, key_layer_dance};
 void function_69(const struct Chord* self) {
     switch (*self->state) {
         case ACTIVATED:
@@ -922,30 +923,64 @@ const struct Chord chord_98 PROGMEM = {H_BOT10, SYM, &state_98, NULL, KC_PIPE, 0
 uint8_t state_99 = IDLE;
 const struct Chord chord_99 PROGMEM = {H_BOT11, SYM, &state_99, NULL, KC_QUES, 0, single_dance};
 uint8_t state_100 = IDLE;
-const struct Chord chord_100 PROGMEM = {H_TOP2, FNC, &state_100, NULL, KC_F1, 0, single_dance};
+const struct Chord chord_100 PROGMEM = {H_TOP2, NUM, &state_100, NULL, KC_1, 0, single_dance};
 uint8_t state_101 = IDLE;
-const struct Chord chord_101 PROGMEM = {H_TOP3, FNC, &state_101, NULL, KC_F2, 0, single_dance};
+const struct Chord chord_101 PROGMEM = {H_TOP3, NUM, &state_101, NULL, KC_2, 0, single_dance};
 uint8_t state_102 = IDLE;
-const struct Chord chord_102 PROGMEM = {H_TOP4, FNC, &state_102, NULL, KC_F3, 0, single_dance};
+const struct Chord chord_102 PROGMEM = {H_TOP4, NUM, &state_102, NULL, KC_3, 0, single_dance};
 uint8_t state_103 = IDLE;
-const struct Chord chord_103 PROGMEM = {H_TOP5, FNC, &state_103, NULL, KC_F4, 0, single_dance};
+const struct Chord chord_103 PROGMEM = {H_TOP5, NUM, &state_103, NULL, KC_4, 0, single_dance};
 uint8_t state_104 = IDLE;
-const struct Chord chord_104 PROGMEM = {H_TOP6, FNC, &state_104, NULL, KC_F5, 0, single_dance};
+const struct Chord chord_104 PROGMEM = {H_TOP6, NUM, &state_104, NULL, KC_5, 0, single_dance};
 uint8_t state_105 = IDLE;
-const struct Chord chord_105 PROGMEM = {H_TOP7, FNC, &state_105, NULL, KC_F6, 0, single_dance};
+const struct Chord chord_105 PROGMEM = {H_TOP7, NUM, &state_105, NULL, KC_6, 0, single_dance};
 uint8_t state_106 = IDLE;
-const struct Chord chord_106 PROGMEM = {H_TOP8, FNC, &state_106, NULL, KC_F7, 0, single_dance};
+const struct Chord chord_106 PROGMEM = {H_TOP8, NUM, &state_106, NULL, KC_7, 0, single_dance};
 uint8_t state_107 = IDLE;
-const struct Chord chord_107 PROGMEM = {H_TOP9, FNC, &state_107, NULL, KC_F8, 0, single_dance};
+const struct Chord chord_107 PROGMEM = {H_TOP9, NUM, &state_107, NULL, KC_8, 0, single_dance};
 uint8_t state_108 = IDLE;
-const struct Chord chord_108 PROGMEM = {H_TOP10, FNC, &state_108, NULL, KC_F9, 0, single_dance};
+const struct Chord chord_108 PROGMEM = {H_TOP10, NUM, &state_108, NULL, KC_9, 0, single_dance};
 uint8_t state_109 = IDLE;
-const struct Chord chord_109 PROGMEM = {H_TOP11, FNC, &state_109, NULL, KC_F10, 0, single_dance};
+const struct Chord chord_109 PROGMEM = {H_TOP11, NUM, &state_109, NULL, KC_0, 0, single_dance};
 uint8_t state_110 = IDLE;
-const struct Chord chord_110 PROGMEM = {H_MID6, FNC, &state_110, NULL, KC_F11, 0, single_dance};
+const struct Chord chord_110 PROGMEM = {H_MID8, NUM, &state_110, NULL, KC_4, 0, single_dance};
 uint8_t state_111 = IDLE;
-const struct Chord chord_111 PROGMEM = {H_MID7, FNC, &state_111, NULL, KC_F12, 0, single_dance};
-void function_112(const struct Chord* self) {
+const struct Chord chord_111 PROGMEM = {H_MID9, NUM, &state_111, NULL, KC_5, 0, single_dance};
+uint8_t state_112 = IDLE;
+const struct Chord chord_112 PROGMEM = {H_MID10, NUM, &state_112, NULL, KC_6, 0, single_dance};
+uint8_t state_113 = IDLE;
+const struct Chord chord_113 PROGMEM = {H_BOT7, NUM, &state_113, NULL, KC_0, 0, single_dance};
+uint8_t state_114 = IDLE;
+const struct Chord chord_114 PROGMEM = {H_BOT8, NUM, &state_114, NULL, KC_1, 0, single_dance};
+uint8_t state_115 = IDLE;
+const struct Chord chord_115 PROGMEM = {H_BOT9, NUM, &state_115, NULL, KC_2, 0, single_dance};
+uint8_t state_116 = IDLE;
+const struct Chord chord_116 PROGMEM = {H_BOT10, NUM, &state_116, NULL, KC_3, 0, single_dance};
+uint8_t state_117 = IDLE;
+const struct Chord chord_117 PROGMEM = {H_TOP2, FNC, &state_117, NULL, KC_F1, 0, single_dance};
+uint8_t state_118 = IDLE;
+const struct Chord chord_118 PROGMEM = {H_TOP3, FNC, &state_118, NULL, KC_F2, 0, single_dance};
+uint8_t state_119 = IDLE;
+const struct Chord chord_119 PROGMEM = {H_TOP4, FNC, &state_119, NULL, KC_F3, 0, single_dance};
+uint8_t state_120 = IDLE;
+const struct Chord chord_120 PROGMEM = {H_TOP5, FNC, &state_120, NULL, KC_F4, 0, single_dance};
+uint8_t state_121 = IDLE;
+const struct Chord chord_121 PROGMEM = {H_TOP6, FNC, &state_121, NULL, KC_F5, 0, single_dance};
+uint8_t state_122 = IDLE;
+const struct Chord chord_122 PROGMEM = {H_TOP7, FNC, &state_122, NULL, KC_F6, 0, single_dance};
+uint8_t state_123 = IDLE;
+const struct Chord chord_123 PROGMEM = {H_TOP8, FNC, &state_123, NULL, KC_F7, 0, single_dance};
+uint8_t state_124 = IDLE;
+const struct Chord chord_124 PROGMEM = {H_TOP9, FNC, &state_124, NULL, KC_F8, 0, single_dance};
+uint8_t state_125 = IDLE;
+const struct Chord chord_125 PROGMEM = {H_TOP10, FNC, &state_125, NULL, KC_F9, 0, single_dance};
+uint8_t state_126 = IDLE;
+const struct Chord chord_126 PROGMEM = {H_TOP11, FNC, &state_126, NULL, KC_F10, 0, single_dance};
+uint8_t state_127 = IDLE;
+const struct Chord chord_127 PROGMEM = {H_MID6, FNC, &state_127, NULL, KC_F11, 0, single_dance};
+uint8_t state_128 = IDLE;
+const struct Chord chord_128 PROGMEM = {H_MID7, FNC, &state_128, NULL, KC_F12, 0, single_dance};
+void function_129(const struct Chord* self) {
     switch (*self->state) {
         case ACTIVATED:
             key_in(KC_LCTL);
@@ -964,10 +999,10 @@ void function_112(const struct Chord* self) {
             break;
     };
 }
-uint8_t state_112 = IDLE;
-uint8_t counter_112 = 0;
-const struct Chord chord_112 PROGMEM = {H_BOT2, FNC, &state_112, &counter_112, 0, 0, function_112};
-void function_113(const struct Chord* self) {
+uint8_t state_129 = IDLE;
+uint8_t counter_129 = 0;
+const struct Chord chord_129 PROGMEM = {H_BOT2, FNC, &state_129, &counter_129, 0, 0, function_129};
+void function_130(const struct Chord* self) {
     switch (*self->state) {
         case ACTIVATED:
             key_in(KC_RCTL);
@@ -986,36 +1021,36 @@ void function_113(const struct Chord* self) {
             break;
     };
 }
-uint8_t state_113 = IDLE;
-uint8_t counter_113 = 0;
-const struct Chord chord_113 PROGMEM = {H_BOT11, FNC, &state_113, &counter_113, 0, 0, function_113};
-uint8_t state_114 = IDLE;
-const struct Chord chord_114 PROGMEM = {H_TOP3, NAV, &state_114, NULL, KC_HOME, 0, single_dance};
-uint8_t state_115 = IDLE;
-const struct Chord chord_115 PROGMEM = {H_TOP4, NAV, &state_115, NULL, KC_UP, 0, single_dance};
-uint8_t state_116 = IDLE;
-const struct Chord chord_116 PROGMEM = {H_TOP5, NAV, &state_116, NULL, KC_PGUP, 0, single_dance};
-uint8_t state_117 = IDLE;
-const struct Chord chord_117 PROGMEM = {H_MID3, NAV, &state_117, NULL, KC_LEFT, 0, single_dance};
-uint8_t state_118 = IDLE;
-const struct Chord chord_118 PROGMEM = {H_MID4, NAV, &state_118, NULL, KC_DOWN, 0, single_dance};
-uint8_t state_119 = IDLE;
-const struct Chord chord_119 PROGMEM = {H_MID5, NAV, &state_119, NULL, KC_RIGHT, 0, single_dance};
-uint8_t state_120 = IDLE;
-const struct Chord chord_120 PROGMEM = {H_BOT3, NAV, &state_120, NULL, KC_END, 0, single_dance};
-uint8_t state_121 = IDLE;
-const struct Chord chord_121 PROGMEM = {H_BOT4, NAV, &state_121, NULL, KC_PGDN, 0, single_dance};
-uint8_t state_122 = IDLE;
-const struct Chord chord_122 PROGMEM = {H_BOT5, NAV, &state_122, NULL, KC_PGDN, 0, single_dance};
+uint8_t state_130 = IDLE;
+uint8_t counter_130 = 0;
+const struct Chord chord_130 PROGMEM = {H_BOT11, FNC, &state_130, &counter_130, 0, 0, function_130};
+uint8_t state_131 = IDLE;
+const struct Chord chord_131 PROGMEM = {H_TOP3, NAV, &state_131, NULL, KC_HOME, 0, single_dance};
+uint8_t state_132 = IDLE;
+const struct Chord chord_132 PROGMEM = {H_TOP4, NAV, &state_132, NULL, KC_UP, 0, single_dance};
+uint8_t state_133 = IDLE;
+const struct Chord chord_133 PROGMEM = {H_TOP5, NAV, &state_133, NULL, KC_PGUP, 0, single_dance};
+uint8_t state_134 = IDLE;
+const struct Chord chord_134 PROGMEM = {H_MID3, NAV, &state_134, NULL, KC_LEFT, 0, single_dance};
+uint8_t state_135 = IDLE;
+const struct Chord chord_135 PROGMEM = {H_MID4, NAV, &state_135, NULL, KC_DOWN, 0, single_dance};
+uint8_t state_136 = IDLE;
+const struct Chord chord_136 PROGMEM = {H_MID5, NAV, &state_136, NULL, KC_RIGHT, 0, single_dance};
+uint8_t state_137 = IDLE;
+const struct Chord chord_137 PROGMEM = {H_BOT3, NAV, &state_137, NULL, KC_END, 0, single_dance};
+uint8_t state_138 = IDLE;
+const struct Chord chord_138 PROGMEM = {H_BOT4, NAV, &state_138, NULL, KC_PGDN, 0, single_dance};
+uint8_t state_139 = IDLE;
+const struct Chord chord_139 PROGMEM = {H_BOT5, NAV, &state_139, NULL, KC_PGDN, 0, single_dance};
 
 const struct Chord* const list_of_chords[] PROGMEM = {
-    &chord_0, &chord_1, &chord_2, &chord_3, &chord_4, &chord_5, &chord_6, &chord_7, &chord_8, &chord_9, &chord_10, &chord_11, &chord_12, &chord_13, &chord_14, &chord_15, &chord_16, &chord_17, &chord_18, &chord_19, &chord_20, &chord_21, &chord_22, &chord_23, &chord_24, &chord_25, &chord_26, &chord_27, &chord_28, &chord_29, &chord_30, &chord_31, &chord_32, &chord_33, &chord_34, &chord_35, &chord_36, &chord_37, &chord_38, &chord_39, &chord_40, &chord_41, &chord_42, &chord_43, &chord_44, &chord_45, &chord_46, &chord_47, &chord_48, &chord_49, &chord_50, &chord_51, &chord_52, &chord_53, &chord_54, &chord_55, &chord_56, &chord_57, &chord_58, &chord_59, &chord_60, &chord_61, &chord_62, &chord_63, &chord_64, &chord_65, &chord_66, &chord_67, &chord_68, &chord_69, &chord_70, &chord_71, &chord_72, &chord_73, &chord_74, &chord_75, &chord_76, &chord_77, &chord_78, &chord_79, &chord_80, &chord_81, &chord_82, &chord_83, &chord_84, &chord_85, &chord_86, &chord_87, &chord_88, &chord_89, &chord_90, &chord_91, &chord_92, &chord_93, &chord_94, &chord_95, &chord_96, &chord_97, &chord_98, &chord_99, &chord_100, &chord_101, &chord_102, &chord_103, &chord_104, &chord_105, &chord_106, &chord_107, &chord_108, &chord_109, &chord_110, &chord_111, &chord_112, &chord_113, &chord_114, &chord_115, &chord_116, &chord_117, &chord_118, &chord_119, &chord_120, &chord_121, &chord_122
+    &chord_0, &chord_1, &chord_2, &chord_3, &chord_4, &chord_5, &chord_6, &chord_7, &chord_8, &chord_9, &chord_10, &chord_11, &chord_12, &chord_13, &chord_14, &chord_15, &chord_16, &chord_17, &chord_18, &chord_19, &chord_20, &chord_21, &chord_22, &chord_23, &chord_24, &chord_25, &chord_26, &chord_27, &chord_28, &chord_29, &chord_30, &chord_31, &chord_32, &chord_33, &chord_34, &chord_35, &chord_36, &chord_37, &chord_38, &chord_39, &chord_40, &chord_41, &chord_42, &chord_43, &chord_44, &chord_45, &chord_46, &chord_47, &chord_48, &chord_49, &chord_50, &chord_51, &chord_52, &chord_53, &chord_54, &chord_55, &chord_56, &chord_57, &chord_58, &chord_59, &chord_60, &chord_61, &chord_62, &chord_63, &chord_64, &chord_65, &chord_66, &chord_67, &chord_68, &chord_69, &chord_70, &chord_71, &chord_72, &chord_73, &chord_74, &chord_75, &chord_76, &chord_77, &chord_78, &chord_79, &chord_80, &chord_81, &chord_82, &chord_83, &chord_84, &chord_85, &chord_86, &chord_87, &chord_88, &chord_89, &chord_90, &chord_91, &chord_92, &chord_93, &chord_94, &chord_95, &chord_96, &chord_97, &chord_98, &chord_99, &chord_100, &chord_101, &chord_102, &chord_103, &chord_104, &chord_105, &chord_106, &chord_107, &chord_108, &chord_109, &chord_110, &chord_111, &chord_112, &chord_113, &chord_114, &chord_115, &chord_116, &chord_117, &chord_118, &chord_119, &chord_120, &chord_121, &chord_122, &chord_123, &chord_124, &chord_125, &chord_126, &chord_127, &chord_128, &chord_129, &chord_130, &chord_131, &chord_132, &chord_133, &chord_134, &chord_135, &chord_136, &chord_137, &chord_138, &chord_139
 };
 
 const uint16_t** const leader_triggers PROGMEM = NULL;
 void (*leader_functions[]) (void) = {};
 
-#define NUMBER_OF_CHORDS 123
+#define NUMBER_OF_CHORDS 140
 #define NUMBER_OF_LEADER_COMBOS 0
 
 bool are_hashed_keycodes_in_sound(HASH_TYPE keycodes_hash, HASH_TYPE sound) {

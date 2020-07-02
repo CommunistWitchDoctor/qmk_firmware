@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TAB,            KC_Q,   KC_W,   KC_F,   KC_P,   KC_G,                                                  KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_PIPE,
       KC_ESC,            KC_A,   KC_R,   KC_S,   KC_T,   KC_D,                                                  KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT,
       KC_LSFT,           KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_LSFT,   KC_LALT,          KC_RALT, KC_LSFT, KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-      KC_LGUI, KC_LCTRL, MT(MOD_LSFT, KC_BSPC), LT(_RAISE, KC_SPC), LT(_LOWER, KC_ENT),       LT(_RAISE, KC_DEL), LT(_LOWER, KC_BSPC), KC_RSFT,  KC_RCTRL, KC_RGUI
+      KC_LGUI, KC_LCTRL, LT(_LOWER, KC_BSPC), LT(_RAISE, KC_SPC), MT(MOD_LSFT, KC_ENT),       MT(MOD_RSFT, KC_DEL), LT(_LOWER, KC_BSPC), LT(_RAISE, KC_SPC),  KC_RCTRL, KC_RGUI
     ),
 /*
  * Lower Layer: Symbols
@@ -101,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_ADJUST] = LAYOUT(
       KC_CAPS, _______, KC_HOME, KC_UP,   KC_PGUP, _______,                                            _______,  _______, _______, _______, _______,  _______,
       KC_INS,  _______, KC_LEFT, KC_DOWN, KC_RGHT, _______,                                            RGB_MOD,  RGB_VAI, RGB_HUI, RGB_SAI, RGB_TOG,  _______,
-      _______, _______, KC_END,  RGB_HUD, KC_PGDN, _______, _______, _______,        _______, _______, RGB_RMOD, RGB_VAD, RGB_HUD, RGB_SAD, _______, _______,
+      _______, _______, KC_END,  RGB_HUD, KC_PGDN, _______, _______, _______,        _______, _______, RGB_RMOD, RGB_VAD, RGB_HUD, RGB_SAD, RGB_M_P, _______,
                                  _______, _______, _______, _______, _______,        _______, _______, _______, _______, _______
     ),
 // /*
@@ -176,7 +176,7 @@ static void render_status(void) {
             oled_write_P(PSTR("Numbers\n"), false);
             break;
         case _ADJUST:
-            oled_write_P(PSTR("Moveent\n"), false);
+            oled_write_P(PSTR("Navigation\n"), false);
             break;
         default:
             oled_write_P(PSTR("Undefined\n"), false);
